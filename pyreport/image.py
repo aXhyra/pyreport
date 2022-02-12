@@ -7,7 +7,7 @@ class Image:
             '\\begin{figure}[H]',
             '\\centering',
             '\\includegraphics[width=\\textwidth]{' + self.path + '}',
-            '\\caption{' + caption + '}',
-            '\\label{' + label + '}',
+            '\\caption{' + self.caption + '}',
+            '\\label{' + self.label + '}',
             '\\end{figure}',
         ]

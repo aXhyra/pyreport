@@ -1,3 +1,6 @@
+from pyreport import Section
+
+
 class PyReport:
 
     def __init__(self, author, date, title, doc_class):
@@ -41,5 +44,11 @@ class PyReport:
         }
 
     def add_section(self, title):
-        section = self.Section(title)
+        section = Section(title)
         self.document[title] = section
+
+    def compile(self):
+        compiled = ''
+        for section in self.document:
+            compiled += self.document[section].compile()
+        return compiled
